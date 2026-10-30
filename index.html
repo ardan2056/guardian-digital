@@ -14,10 +14,10 @@
   <meta property="og:description" content="Kenali jebakan siber, latih keputusan aman, dan ambil tindakan darurat sebelum terlambat.">
   <meta property="og:type" content="website">
 
-  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <!-- Google Fonts: Host Grotesk, Instrument Sans & JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:ital,wght@0,400..800;1,400..800&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
 </head>
@@ -121,25 +121,78 @@
     <!-- VIEW 1: SCAN CENTER (DETEKSI & ANALISIS CEPAT) -->
     <!-- ============================================== -->
     <section class="view-section active" id="view-scanner">
-      <!-- Hero Banner -->
+      <!-- Hero Banner (1.45:1 Layout Split & Product Diagram) -->
       <div class="hero-banner">
-        <div class="hero-tag">
-          <span>🛡️ Digital Threat Detection</span>
-          <span>•</span>
-          <span>100% Client-Side Privacy</span>
-        </div>
-        <h2 class="hero-title">Kenali <span class="highlight">Jebakan Siber</span> Sebelum Terlambat</h2>
-        <p class="hero-desc">
-          Evaluasi pesan mencurigakan, tautan phishing, file APK berkedok foto/resi, atau nomor asing dengan analisis pola heuristik yang dapat dijelaskan (explainable indicators).
-        </p>
-        <div class="hero-quick-stats">
-          <div class="stat-pill">
-            <span>Level Anda:</span>
-            <strong id="hero-stat-level">Pemula Digital</strong>
+        <div class="hero-split-layout">
+          <div class="hero-text-col">
+            <div class="hero-tag">
+              <span>🛡️ Digital Threat Detection</span>
+              <span class="tag-sep">•</span>
+              <span>100% Client-Side Privacy</span>
+            </div>
+            <h2 class="hero-title">Kenali <span class="highlight">Jebakan Siber</span> Sebelum Terlambat</h2>
+            <p class="hero-desc">
+              Evaluasi pesan mencurigakan, tautan phishing, file APK berkedok foto/resi, atau nomor asing dengan analisis pola heuristik yang dapat dijelaskan secara transparan dan objektif.
+            </p>
           </div>
-          <div class="stat-pill">
-            <span>Privasi:</span>
-            <strong style="color: var(--success);">Nol Data Server (Lokal)</strong>
+
+          <!-- Compact Product Diagram with Blue Center, Orbit Lines & White Input Tiles -->
+          <div class="hero-diagram-wrap" aria-hidden="true">
+            <div class="hero-diagram">
+              <svg class="diagram-orbit-svg" viewBox="0 0 320 270">
+                <ellipse cx="160" cy="135" rx="130" ry="95" class="diagram-orbit-ring"></ellipse>
+                <ellipse cx="160" cy="135" rx="75" ry="55" class="diagram-orbit-ring ring-inner"></ellipse>
+                <path d="M60 40 Q 110 80, 160 135" class="diagram-connect-line"></path>
+                <path d="M260 40 Q 210 80, 160 135" class="diagram-connect-line"></path>
+                <path d="M60 230 Q 110 190, 160 135" class="diagram-connect-line"></path>
+                <path d="M260 230 Q 210 190, 160 135" class="diagram-connect-line"></path>
+              </svg>
+
+              <!-- Central Product Node with Electric-Blue Gradient -->
+              <div class="diagram-center-node">
+                <div class="diagram-center-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" width="22" height="22">
+                    <path d="M12 2L3 7v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-9-5z"/>
+                  </svg>
+                </div>
+                <span class="diagram-center-title">Engine Guardian</span>
+                <span class="diagram-center-sub">Heuristik Klien</span>
+              </div>
+
+              <!-- Small White Tiles: Real Concepts from the brief -->
+              <div class="diagram-tile tile-tl">
+                <span class="diagram-tile-icon">📱</span>
+                <span>File .APK Kurir</span>
+              </div>
+              <div class="diagram-tile tile-tr">
+                <span class="diagram-tile-icon">🔗</span>
+                <span>URL Phishing Bank</span>
+              </div>
+              <div class="diagram-tile tile-bl">
+                <span class="diagram-tile-icon">💬</span>
+                <span>Manipulasi Urgensi</span>
+              </div>
+              <div class="diagram-tile tile-br">
+                <span class="diagram-tile-icon">📞</span>
+                <span>Nomor Asing</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ruled strip below for supporting facts -->
+        <div class="hero-facts-strip">
+          <div class="fact-item">
+            <span class="fact-label">Tingkat Literasi Akun</span>
+            <span class="fact-val" id="hero-stat-level">Pemula Digital</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-label">Pemrosesan &amp; Privasi</span>
+            <span class="fact-val accent">100% Komputasi Klien (Lokal)</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-label">Penyimpanan Server</span>
+            <span class="fact-val">Nol Log / Nol Jejak Eksternal</span>
           </div>
         </div>
       </div>
@@ -566,54 +619,136 @@
         <div id="official-directory-grid" class="directory-grid"></div>
       </div>
 
-      <!-- Transparency, Privacy & Ethics (Hackathon Criteria Direct Alignment) -->
-      <div class="card">
+      <!-- Transparency, Privacy & Ethics (Native Disclosures with Ruled Rows and Rotating Plus) -->
+      <div class="card disclosure-card">
         <div class="card-header">
           <div class="card-title-group">
             <div class="card-title-icon purple">⚖️</div>
             <div>
-              <h3 class="card-title">Transparansi, Batasan & Kebijakan Privasi</h3>
+              <h3 class="card-title">Transparansi, Batasan &amp; Kebijakan Privasi</h3>
               <p class="card-subtitle">Komitmen etika dan kejujuran mengenai batasan sistem kami</p>
             </div>
           </div>
         </div>
 
-        <div style="display: flex; flex-direction: column; gap: 1.25rem; line-height: 1.6;">
-          <div>
-            <h4 style="color: var(--primary); font-size: 1rem; margin-bottom: 0.35rem;">1. Cara Kerja Sistem Analisis (Explainable Heuristics)</h4>
-            <p style="font-size: 0.9rem; color: var(--text-muted);">
+        <div class="disclosure-group">
+          <!-- Disclosure 1 -->
+          <details class="disclosure-item" open>
+            <summary class="disclosure-summary">
+              <span>1. Bagaimana Cara Kerja Sistem Analisis (Explainable Heuristics)?</span>
+              <span class="disclosure-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="disclosure-content">
               Sistem menggunakan pencocokan aturan deterministik (Rule-based heuristics) yang mengidentifikasi pola manipulasi psikologis khas Indonesia (urgensi palsu, iming-iming hadiah, deposit loker), deteksi ekstensi Android berisiko (.APK), dan analisis struktur URL (Shortener, IP, domain tiruan). Setiap indikator yang memicu skor dijelaskan alasannya kepada pengguna.
-            </p>
-          </div>
+            </div>
+          </details>
 
-          <div>
-            <h4 style="color: var(--success); font-size: 1rem; margin-bottom: 0.35rem;">2. Jaminan Privasi Mutlak (100% Client-Side)</h4>
-            <p style="font-size: 0.9rem; color: var(--text-muted);">
-              Kami mematuhi batasan keamanan & privasi secara ketat: Teks, tautan, atau nomor yang Anda masukkan TIDAK PERNAH dikirim ke server luar atau disimpan di cloud. Seluruh komputasi berjalan murni di peramban (browser) Anda. Kami tidak pernah meminta informasi sensitif seperti password nyata atau OTP Anda.
-            </p>
-          </div>
+          <!-- Disclosure 2 -->
+          <details class="disclosure-item">
+            <summary class="disclosure-summary">
+              <span>2. Bagaimana Jaminan Privasi Mutlak (100% Client-Side)?</span>
+              <span class="disclosure-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="disclosure-content">
+              Kami mematuhi batasan keamanan &amp; privasi secara ketat: Teks, tautan, atau nomor yang Anda masukkan TIDAK PERNAH dikirim ke server luar atau disimpan di cloud. Seluruh komputasi berjalan murni di peramban (browser) Anda. Kami tidak pernah meminta informasi sensitif seperti password nyata atau OTP Anda.
+            </div>
+          </details>
 
-          <div>
-            <h4 style="color: var(--warning); font-size: 1rem; margin-bottom: 0.35rem;">3. Keterbatasan Aplikasi (Honest Disclaimer)</h4>
-            <p style="font-size: 0.9rem; color: var(--text-muted);">
+          <!-- Disclosure 3 -->
+          <details class="disclosure-item">
+            <summary class="disclosure-summary">
+              <span>3. Apa Saja Keterbatasan Aplikasi (Honest Disclaimer)?</span>
+              <span class="disclosure-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="disclosure-content">
               Aplikasi ini adalah instrumen edukasi dan panduan pencegahan. Skor rendah BUKAN merupakan jaminan mutlak 100% bahwa suatu interaksi aman, dan skor tinggi adalah indikasi kewaspadaan pola. Verifikasi ganda ke kanal resmi instansi terkait tetap menjadi langkah paling aman.
-            </p>
-          </div>
+            </div>
+          </details>
 
-          <div>
-            <h4 style="color: var(--text-main); font-size: 1rem; margin-bottom: 0.35rem;">4. Manajemen Data Lokal</h4>
-            <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 0.75rem;">
-              Data yang tersimpan di perangkat Anda hanyalah status checklist darurat dan progres simulasi Anda (localStorage). Anda dapat menghapusnya sewaktu-waktu:
-            </p>
-            <button id="btn-reset-local-data" class="btn btn-sm btn-outline" style="color: #FFA5B2; border-color: rgba(239, 68, 68, 0.4);">
-              🗑️ Hapus Seluruh Data Lokal & Reset Progres
-            </button>
-          </div>
+          <!-- Disclosure 4 -->
+          <details class="disclosure-item">
+            <summary class="disclosure-summary">
+              <span>4. Bagaimana Manajemen &amp; Penghapusan Data Lokal?</span>
+              <span class="disclosure-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="disclosure-content">
+              <p style="margin-bottom: 0.75rem;">
+                Data yang tersimpan di perangkat Anda hanyalah status checklist darurat dan progres simulasi Anda (localStorage). Anda dapat menghapusnya sewaktu-waktu:
+              </p>
+              <button id="btn-reset-local-data" class="btn btn-sm btn-outline btn-reset-danger">
+                🗑️ Hapus Seluruh Data Lokal &amp; Reset Progres
+              </button>
+            </div>
+          </details>
         </div>
       </div>
     </section>
 
   </main>
+
+  <!-- SUBSTANTIAL DARK CLOSING & FOOTER (Dark Passage 2) -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-top">
+        <div class="footer-col brand-col">
+          <div class="footer-brand">
+            <div class="footer-logo-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
+                <path d="M12 2L3 7v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-9-5z"/>
+                <path d="M12 8v8M8 12h8"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="footer-title">GUARDIAN RUANG DIGITAL</h3>
+              <span class="footer-badge">MIT-WEEK 2026 OFFICIAL</span>
+            </div>
+          </div>
+          <p class="footer-desc">
+            Inisiatif ketahanan siber generasi muda Indonesia. Lindungi diri, selamatkan kerabat, dan tangkal manipulasi rekayasa sosial sebelum kerugian terjadi.
+          </p>
+          <div class="footer-privacy-pill">
+            <span class="privacy-dot"></span>
+            <span>100% Client-Side Evaluation • Nol Pelacakan Eksternal</span>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Kanal Darurat Cepat</h4>
+          <ul class="footer-links-list">
+            <li><a href="https://cekrekening.id" target="_blank" rel="noopener">CekRekening.id (Kominfo) ↗</a></li>
+            <li><a href="https://patrolisiber.id" target="_blank" rel="noopener">PatroliSiber Bareskrim Polri ↗</a></li>
+            <li><a href="tel:157">Kontak Hotline OJK 157 ↗</a></li>
+            <li><a href="https://aduankonten.id" target="_blank" rel="noopener">AduanKonten.id ↗</a></li>
+            <li><a href="tel:110">Layanan Polisi 110 (24 Jam) ↗</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Modul Aplikasi</h4>
+          <ul class="footer-links-list">
+            <li><button class="footer-nav-link" data-view="scanner">Scan Center (Pendeteksi)</button></li>
+            <li><button class="footer-nav-link" data-view="panic">Pertolongan Pertama Golden Hour</button></li>
+            <li><button class="footer-nav-link" data-view="simulator">Simulator Keputusan Realistis</button></li>
+            <li><button class="footer-nav-link" data-view="alert">Guardian Alert Generator</button></li>
+            <li><button class="footer-nav-link" data-view="checkup">Security Checkup (8 Kebiasaan)</button></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Komitmen Etika</h4>
+          <p class="footer-ethics-text">
+            Sistem dirancang sebagai instrumen pencegahan dan literasi kritis. Tidak menggantikan penyelidikan aparat penegak hukum resmi. Verifikasi ganda selalu disarankan.
+          </p>
+          <div class="footer-version-tag">Build v2.4.0 • Software Design System</div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Guardian Ruang Digital • Karya Tim Guardian untuk MIT-Week 2026. Hak Cipta Dilindungi.</p>
+        <p class="footer-note">Desain Antarmuka Berdasarkan Sistem Perangkat Lunak Modern.</p>
+      </div>
+    </div>
+  </footer>
 
   <!-- MOBILE BOTTOM NAVIGATION BAR -->
   <nav class="mobile-bottom-nav">

@@ -105,11 +105,16 @@ const App = (() => {
     setupResourcesView();
     updateGuardianProfile();
 
-    // Jalankan scan otomatis pada sampel pertama agar juri langsung melihat keajaiban fitur
-    const inputEl = document.getElementById('smart-input');
-    if (inputEl && !inputEl.value) {
-      inputEl.value = DEMO_SAMPLES.apk_tilang;
-      runScan();
+    // Jalankan scan otomatis pada sampel pertama jika di view scanner
+    const initialView = new URLSearchParams(window.location.search).get('view') || window.location.hash.replace('#', '') || 'scanner';
+    if (initialView && initialView !== 'scanner') {
+      switchView(initialView);
+    } else {
+      const inputEl = document.getElementById('smart-input');
+      if (inputEl && !inputEl.value) {
+        inputEl.value = DEMO_SAMPLES.apk_tilang;
+        runScan(true);
+      }
     }
   }
 
@@ -148,6 +153,11 @@ const App = (() => {
     });
 
     window.scrollTo({ top: 0, behavior: 'smooth' });
+    try {
+      if (window.location.hash !== '#' + viewName) {
+        history.replaceState(null, '', '#' + viewName);
+      }
+    } catch (e) {}
     updateGuardianProfile();
   }
 
@@ -236,7 +246,7 @@ const App = (() => {
     });
   }
 
-  function runScan() {
+  function runScan(isInitial = false) {
     const inputEl = document.getElementById('smart-input');
     const rawText = inputEl.value.trim();
     const resultBox = document.getElementById('scan-results');
@@ -250,14 +260,16 @@ const App = (() => {
     renderScanResult(result);
     resultBox.classList.add('active');
 
-    if (result.status === 'danger') {
-      SoundFX.play('danger');
-    } else {
-      SoundFX.play('safe');
-    }
+    if (!isInitial) {
+      if (result.status === 'danger') {
+        SoundFX.play('danger');
+      } else {
+        SoundFX.play('safe');
+      }
 
-    // Scroll halus ke hasil
-    resultBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      // Scroll halus ke hasil
+      resultBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
   }
 
   function renderScanResult(res) {

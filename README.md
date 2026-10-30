@@ -104,13 +104,16 @@ Sesuai dengan ketentuan juknis MIT-Week 2026:
 
 ---
 
-## 💻 4. Teknologi & Desain Estetika
+## 💻 4. Teknologi & Desain Estetika (Software Design System)
 
 - **Frontend**: Vanilla HTML5, Vanilla CSS3 Modern, Vanilla JavaScript (ES6+ Modular).
 - **Design System**:
-  - Tema *Cyber-Guardian Dark Mode* dengan palet warna neon cyan (`#00F2FE`), electric blue (`#3B82F6`), cyber purple (`#8B5CF6`), dan aksen tanda bahaya rose (`#EF4444`).
-  - Efek glassmorphism modern (`backdrop-filter: blur`), tipografi Google Fonts (*Plus Jakarta Sans* & *JetBrains Mono*).
-  - Tampilan responsif penuh (*Mobile-First Design*) dengan navigasi bilah bawah khusus perangkat smartphone.
+  - Mengadopsi prinsip desain visual **Software** modern: halaman terbuka terang (*open light page* `#fcfcfd`) dipadukan dengan tipografi judul sans-serif gelap tegas, aksen aksi biru elektrik (*electric-blue* `#074ce0`), dan kartu panel putih bersudut lengkung 12px berbayang lembut.
+  - **Dua Bagian Gelap (*Dual Substantial Dark Passages*)**: Menggunakan bidang gelap berkesinambungan (`#16191f`) pada alur pertolongan pertama darurat (*Panic to Action Golden Hour*) serta bagian penutup (*closing & footer*) untuk menciptakan atmosfer keseriusan dan fokus penanganan insiden.
+  - **Layout Hero 1.45:1 & Diagram Produk Konseptual**: Membuka halaman dengan rasio kolom 1.45:1, dilengkapi diagram produk dengan simpul pusat biru gradien dan ubin putih statis untuk konsep nyata (*File .APK Kurir, Phishing Bank, Urgensi WA, Nomor Asing*), serta bilah pembatas fakta pendukung (*ruled strip*).
+  - **Tipografi Otoritatif**: Google Fonts **Host Grotesk** (display, headings, dan angka besar dengan *tight tracking*) serta **Instrument Sans** (paragraf, kontrol form, label), didukung **JetBrains Mono** untuk inspeksi URL.
+  - **Pengungkapan Asli (*Native Disclosures*)**: Menggunakan elemen native `<details>` dan `<summary>` dengan baris bergaris tipis dan ikon plus yang berotasi saat dibuka.
+  - **Aksesibilitas & Gerakan Terbatas (*Reduced Motion*)**: Kontrol keyboard ramah aksesibilitas dengan fokus outline terlihat jelas, serta dukungan penuh preferensi `prefers-reduced-motion`.
 - **Web Audio Synthesizer**: Efek suara mikro-interaksi sintetis murni menggunakan Web Audio API (bebas dari risiko *broken file / 404 audio*).
 
 ---
