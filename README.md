@@ -1,4 +1,4 @@
-# 🛡️ Guardian Ruang Digital (SiberGuard.id)
+# 🛡️ Tuntun (Tuntun.id) - Navigasi & Perlindungan Ruang Digital
 > **Empowering Today's Generation to Recognize, Learn, & Act Against Cyber Deception**  
 > *Karya Web App untuk MIT-Week 2026: Guardians of the Digital Space*
 
@@ -21,7 +21,7 @@ Ketika seseorang menjadi target atau bahkan **terlanjur mengeklik link/mentransf
 
 ## 🚀 2. Solusi Tiga Pilar: Recognize, Learn, & Act
 
-Aplikasi **Guardian Ruang Digital** dirancang dengan pendekatan mendalam dan terintegrasi:
+Aplikasi **Tuntun** dirancang dengan pendekatan mendalam dan terintegrasi:
 
 ```mermaid
 graph TD

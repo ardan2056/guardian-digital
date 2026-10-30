@@ -3,15 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Guardian Ruang Digital - MIT Week 2026 | Deteksi, Simulasi & Pertolongan Pertama Tipuan Siber</title>
+  <title>Tuntun - Navigasi &amp; Perlindungan Ruang Digital | MIT Week 2026</title>
   
   <meta name="description" content="Aplikasi web cerdas untuk mengenali jebakan siber, berlatih pengambilan keputusan aman melalui simulasi realistis, dan panduan respons darurat saat menjadi korban.">
-  <meta name="keywords" content="keamanan siber, penipuan online, anti phishing, kurir apk, cek rekening, darurat siber, guardian digital, MIT-Week 2026">
-  <meta name="author" content="Guardian Team - MIT Week 2026">
+  <meta name="keywords" content="tuntun, keamanan siber, penipuan online, anti phishing, kurir apk, cek rekening, darurat siber, guardian digital, MIT-Week 2026">
+  <meta name="author" content="Tim Tuntun - MIT Week 2026">
   
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="64x64" href="assets/favicon-64.png">
+  <link rel="apple-touch-icon" sizes="128x128" href="assets/favicon-128.png">
+  <link rel="shortcut icon" href="favicon.ico">
+
   <!-- Open Graph -->
-  <meta property="og:title" content="Guardian Ruang Digital - Empowering Today's Generation">
+  <meta property="og:title" content="Tuntun - Panduan &amp; Perlindungan Ruang Digital">
   <meta property="og:description" content="Kenali jebakan siber, latih keputusan aman, dan ambil tindakan darurat sebelum terlambat.">
+  <meta property="og:image" content="assets/tuntun-logo.png">
   <meta property="og:type" content="website">
 
   <!-- Google Fonts: Host Grotesk, Instrument Sans & JetBrains Mono -->
@@ -19,21 +26,17 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:ital,wght@0,400..800;1,400..800&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css?v=2.2.0">
+  <link rel="stylesheet" href="style.css?v=2.3.0">
 </head>
 <body>
 
   <!-- HEADER & NAVIGATION BAR -->
   <header class="header-nav">
     <div class="nav-container">
-      <a href="#" class="logo-brand" data-view="scanner">
-        <div class="logo-icon-wrap">
-          <svg viewBox="0 0 24 24">
-            <path d="M12 2L3 7v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-9-5zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V8.3l7-3.89v7.59z"/>
-          </svg>
-        </div>
+      <a href="#" class="logo-brand" data-view="scanner" aria-label="Tuntun - Beranda">
+        <img src="assets/tuntun-logo.png" alt="Logo Tuntun" class="logo-img">
         <div class="brand-text">
-          <h1>GUARDIAN RUANG DIGITAL</h1>
+          <h1>TUNTUN</h1>
           <span class="brand-badge">MIT-WEEK 2026</span>
         </div>
       </a>
@@ -78,7 +81,7 @@
               <line x1="12" y1="9" x2="12" y2="13"></line>
               <line x1="12" y1="17" x2="12.01" y2="17"></line>
             </svg>
-            Guardian Alert
+            Tuntun Alert
           </button>
         </li>
         <li>
@@ -150,7 +153,7 @@
                     <path d="M12 2L3 7v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-9-5z"/>
                   </svg>
                 </div>
-                <span class="diagram-center-title">Engine Guardian</span>
+                <span class="diagram-center-title">Engine Tuntun</span>
                 <span class="diagram-center-sub">Heuristik Klien</span>
               </div>
 
@@ -552,7 +555,7 @@
             <ul id="card-preview-defense" class="alert-bullet-list alert-defense-list"></ul>
 
             <div class="alert-card-footer">
-              <span>Dibuat via Guardian Ruang Digital</span>
+              <span>Dibuat via Tuntun</span>
               <span>Kanal Resmi: CekRekening.id | OJK 157</span>
             </div>
           </div>
@@ -717,14 +720,11 @@
       <div class="footer-top">
         <div class="footer-col brand-col">
           <div class="footer-brand">
-            <div class="footer-logo-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
-                <path d="M12 2L3 7v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-9-5z"/>
-                <path d="M12 8v8M8 12h8"/>
-              </svg>
+            <div class="footer-logo-box">
+              <img src="assets/tuntun-logo.png" alt="Logo Tuntun" class="footer-logo-img">
             </div>
             <div>
-              <h3 class="footer-title">GUARDIAN RUANG DIGITAL</h3>
+              <h3 class="footer-title">TUNTUN</h3>
               <span class="footer-badge">MIT-WEEK 2026 OFFICIAL</span>
             </div>
           </div>
@@ -754,7 +754,7 @@
             <li><button class="footer-nav-link" data-view="scanner">Scan Center (Pendeteksi)</button></li>
             <li><button class="footer-nav-link" data-view="panic">Pertolongan Pertama Golden Hour</button></li>
             <li><button class="footer-nav-link" data-view="simulator">Simulator Keputusan Realistis</button></li>
-            <li><button class="footer-nav-link" data-view="alert">Guardian Alert Generator</button></li>
+            <li><button class="footer-nav-link" data-view="alert">Tuntun Alert Generator</button></li>
             <li><button class="footer-nav-link" data-view="checkup">Security Checkup (8 Kebiasaan)</button></li>
           </ul>
         </div>
@@ -769,7 +769,7 @@
       </div>
 
       <div class="footer-bottom">
-        <p>© 2026 Guardian Ruang Digital • Karya Tim Guardian untuk MIT-Week 2026. Hak Cipta Dilindungi.</p>
+        <p>© 2026 Tuntun • Karya Tim untuk MIT-Week 2026. Hak Cipta Dilindungi.</p>
         <p class="footer-note">Desain Antarmuka Berdasarkan Sistem Perangkat Lunak Modern.</p>
       </div>
     </div>
@@ -829,12 +829,12 @@
   <div id="toast-container" class="toast-container"></div>
 
   <!-- MODULE SCRIPTS -->
-  <script src="scanner.js?v=2.2.0"></script>
-  <script src="panic.js?v=2.2.0"></script>
-  <script src="simulator.js?v=2.2.0"></script>
-  <script src="alert-generator.js?v=2.2.0"></script>
-  <script src="checkup.js?v=2.2.0"></script>
-  <script src="resources.js?v=2.2.0"></script>
-  <script src="app.js?v=2.2.0"></script>
+  <script src="scanner.js?v=2.3.0"></script>
+  <script src="panic.js?v=2.3.0"></script>
+  <script src="simulator.js?v=2.3.0"></script>
+  <script src="alert-generator.js?v=2.3.0"></script>
+  <script src="checkup.js?v=2.3.0"></script>
+  <script src="resources.js?v=2.3.0"></script>
+  <script src="app.js?v=2.3.0"></script>
 </body>
 </html>
