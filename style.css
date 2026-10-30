@@ -662,6 +662,26 @@ button, input, textarea, select {
   font-size: 13px;
 }
 
+.diagram-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.diagram-dot.dot-danger {
+  background: var(--color-danger);
+}
+
+.diagram-dot.dot-accent {
+  background: var(--dp-color-accent);
+}
+
+.diagram-dot.dot-warning {
+  background: var(--color-warning);
+}
+
 /* ==========================================================================
    BUTTONS & CONTROLS
    Blue primary buttons and pale outlined secondary buttons. Modest radius.

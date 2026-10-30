@@ -19,7 +19,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:ital,wght@0,400..800;1,400..800&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=2.2.0">
 </head>
 <body>
 
@@ -125,11 +125,6 @@
       <div class="hero-banner">
         <div class="hero-split-layout">
           <div class="hero-text-col">
-            <div class="hero-tag">
-              <span>🛡️ Digital Threat Detection</span>
-              <span class="tag-sep">•</span>
-              <span>100% Client-Side Privacy</span>
-            </div>
             <h2 class="hero-title">Kenali <span class="highlight">Jebakan Siber</span> Sebelum Terlambat</h2>
             <p class="hero-desc">
               Evaluasi pesan mencurigakan, tautan phishing, file APK berkedok foto/resi, atau nomor asing dengan analisis pola heuristik yang dapat dijelaskan secara transparan dan objektif.
@@ -161,19 +156,19 @@
 
               <!-- Small White Tiles: Real Concepts from the brief -->
               <div class="diagram-tile tile-tl">
-                <span class="diagram-tile-icon">📱</span>
+                <span class="diagram-dot dot-danger"></span>
                 <span>File .APK Kurir</span>
               </div>
               <div class="diagram-tile tile-tr">
-                <span class="diagram-tile-icon">🔗</span>
+                <span class="diagram-dot dot-accent"></span>
                 <span>URL Phishing Bank</span>
               </div>
               <div class="diagram-tile tile-bl">
-                <span class="diagram-tile-icon">💬</span>
+                <span class="diagram-dot dot-warning"></span>
                 <span>Manipulasi Urgensi</span>
               </div>
               <div class="diagram-tile tile-br">
-                <span class="diagram-tile-icon">📞</span>
+                <span class="diagram-dot dot-danger"></span>
                 <span>Nomor Asing</span>
               </div>
             </div>
@@ -212,7 +207,7 @@
               <p class="card-subtitle">Tempelkan teks pesan WhatsApp/SMS, tautan web (URL), atau nomor yang mencurigakan</p>
             </div>
           </div>
-          <div id="detected-type-badge" class="type-detector-badge">🔍 Deteksi Otomatis</div>
+          <div id="detected-type-badge" class="type-detector-badge">Deteksi Otomatis</div>
         </div>
 
         <div class="input-group">
@@ -233,14 +228,14 @@
           </div>
         </div>
 
-        <!-- Quick Demo Chips untuk Kemudahan Penilaian Juri -->
+        <!-- Quick Demo Chips -->
         <div class="quick-samples">
-          <span class="sample-label">Coba Contoh Kasus Nyata:</span>
-          <button class="sample-chip" data-sample="apk_tilang">📱 Surat Tilang .APK</button>
-          <button class="sample-chip" data-sample="loker_like">💼 Loker Like Video</button>
-          <button class="sample-chip" data-sample="phishing_bca">💳 Phishing Bank BCA</button>
-          <button class="sample-chip" data-sample="giveaway_dana">🎁 Hadiah DANA Kaget</button>
-          <button class="sample-chip" data-sample="nomor_asing">📞 Nomor Asing (+234)</button>
+          <span class="sample-label">Contoh Kasus:</span>
+          <button class="sample-chip" data-sample="apk_tilang">Surat Tilang .APK</button>
+          <button class="sample-chip" data-sample="loker_like">Loker Like Video</button>
+          <button class="sample-chip" data-sample="phishing_bca">Phishing Bank BCA</button>
+          <button class="sample-chip" data-sample="giveaway_dana">Hadiah Saldo DANA</button>
+          <button class="sample-chip" data-sample="nomor_asing">Nomor Asing (+234)</button>
         </div>
       </div>
 
@@ -248,9 +243,15 @@
       <div id="scan-results" class="scan-result-card card">
         <div class="card-header">
           <div class="card-title-group">
-            <div class="card-title-icon">📊</div>
+            <div class="card-title-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
+                <line x1="18" y1="20" x2="18" y2="10"></line>
+                <line x1="12" y1="20" x2="12" y2="4"></line>
+                <line x1="6" y1="20" x2="6" y2="14"></line>
+              </svg>
+            </div>
             <div>
-              <h3 class="card-title">Hasil Evaluasi Risiko & Penjelasan Pola</h3>
+              <h3 class="card-title">Hasil Evaluasi Risiko &amp; Penjelasan Pola</h3>
               <p class="card-subtitle">Temuan heuristik dan indikator manipulasi emosi</p>
             </div>
           </div>
@@ -306,12 +307,12 @@
               <line x1="12" y1="16" x2="12.01" y2="16"></line>
             </svg>
             <div>
-              <strong style="color: #FFA5B2; display: block; font-size: 0.95rem;">Sudah Terlanjur Klik Tautan atau Bagikan Data?</strong>
-              <span style="font-size: 0.85rem; color: var(--text-muted);">Segera ikuti panduan pertolongan pertama Golden Hour kami untuk menyelamatkan aset dan akun Anda!</span>
+              <strong class="panic-bridge-title" style="display: block; font-size: 0.95rem;">Sudah Terlanjur Klik Tautan atau Membagikan Data?</strong>
+              <span style="font-size: 0.85rem; color: var(--text-muted);">Segera ikuti panduan pertolongan pertama 15 menit pertama untuk mengamankan akun dan rekening Anda.</span>
             </div>
           </div>
           <button id="btn-panic-bridge" class="btn btn-danger">
-            🚨 Buka Panduan Darurat
+            Buka Panduan Darurat
           </button>
         </div>
       </div>
@@ -322,10 +323,16 @@
     <!-- VIEW 2: PANIC TO ACTION (PERTOLONGAN PERTAMA)  -->
     <!-- ============================================== -->
     <section class="view-section" id="view-panic">
-      <div class="card" style="margin-bottom: 1.5rem; border-color: rgba(239, 68, 68, 0.4);">
+      <div class="card" style="margin-bottom: 1.5rem;">
         <div class="card-header">
           <div class="card-title-group">
-            <div class="card-title-icon danger">🚨</div>
+            <div class="card-title-icon danger">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
+                <polygon points="7.86 2 16.14 2 22 7.86 22 16.14 16.14 22 7.86 22 2 16.14 2 7.86 7.86 2"></polygon>
+                <line x1="12" y1="8" x2="12" y2="12"></line>
+                <line x1="12" y1="16" x2="12.01" y2="16"></line>
+              </svg>
+            </div>
             <div>
               <h3 class="card-title">Pertolongan Pertama Digital (Panic to Action)</h3>
               <p class="card-subtitle">Panduan langkah terstruktur saat Anda atau kerabat Anda terlanjur menjadi korban</p>
@@ -333,36 +340,31 @@
           </div>
         </div>
 
-        <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.25rem;">
+        <p style="font-size: 0.95rem; margin-bottom: 1.25rem;">
           Pilih kondisi darurat yang Anda alami saat ini. Ikuti daftar periksa prioritas secara berurutan:
         </p>
 
         <!-- Selector Skenario Darurat -->
         <div class="panic-scenario-selector">
           <button class="panic-chip active" data-panic="otp">
-            <span class="panic-chip-icon">🔐</span>
             <span class="panic-chip-title">Kirim OTP / Sandi</span>
             <span class="panic-chip-desc">Kode rahasia terlanjur dikirim ke penipu</span>
           </button>
           <button class="panic-chip" data-panic="transfer">
-            <span class="panic-chip-icon">💸</span>
             <span class="panic-chip-title">Transfer Uang</span>
             <span class="panic-chip-desc">Uang sudah dikirim ke rekening penampung</span>
           </button>
           <button class="panic-chip" data-panic="apk">
-            <span class="panic-chip-icon">📲</span>
             <span class="panic-chip-title">Instal File .APK</span>
-            <span class="panic-chip-desc">File kurir/undangan dibuka di HP</span>
+            <span class="panic-chip-desc">File kurir atau undangan dibuka di HP</span>
           </button>
           <button class="panic-chip" data-panic="leak">
-            <span class="panic-chip-icon">🪪</span>
             <span class="panic-chip-title">Data KTP Bocor</span>
-            <span class="panic-chip-desc">Foto NIK/Selfie dikirim ke pihak mencurigakan</span>
+            <span class="panic-chip-desc">Foto NIK atau selfie terkirim</span>
           </button>
           <button class="panic-chip" data-panic="hijack">
-            <span class="panic-chip-icon">👤</span>
             <span class="panic-chip-title">Akun WA Dibajak</span>
-            <span class="panic-chip-desc">Akun media sosial/WhatsApp diambil alih</span>
+            <span class="panic-chip-desc">Akun media sosial atau WhatsApp diambil alih</span>
           </button>
         </div>
       </div>
@@ -371,8 +373,8 @@
       <div class="card">
         <div class="golden-hour-bar">
           <div>
-            <h3 id="panic-active-title" style="font-size: 1.2rem; font-weight: 800; color: #FFF;">🔐 Terlanjur Kirim OTP</h3>
-            <p id="panic-active-tagline" style="font-size: 0.85rem; color: var(--text-muted); margin-top: 2px;">Kondisi Kritis: Pembobolan Akses Sedang Berlangsung</p>
+            <h3 id="panic-active-title" style="font-size: 1.2rem; font-weight: 800;">Terlanjur Kirim OTP</h3>
+            <p id="panic-active-tagline" style="font-size: 0.85rem; margin-top: 2px;">Kondisi Kritis: Pembobolan Akses Sedang Berlangsung</p>
           </div>
           <div class="panic-progress-wrap">
             <div class="progress-track">
@@ -383,7 +385,7 @@
         </div>
 
         <div style="margin-bottom: 1rem; display: flex; align-items: center; justify-content: space-between;">
-          <span id="panic-golden-time" class="golden-time-badge">⏱️ 0 - 15 Menit Pertama Sangat Menentukan!</span>
+          <span id="panic-golden-time" class="golden-time-badge">15 Menit Pertama Sangat Menentukan</span>
           <span style="font-size: 0.8rem; color: var(--text-dim);">Centang kotak setelah melakukan tindakan:</span>
         </div>
 
@@ -408,10 +410,15 @@
       <div class="card" style="margin-bottom: 1.5rem;">
         <div class="card-header">
           <div class="card-title-group">
-            <div class="card-title-icon purple">🎮</div>
+            <div class="card-title-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
+                <rect x="2" y="6" width="20" height="12" rx="2"></rect>
+                <path d="M6 12h4m-2-2v4m7-2h.01m3 0h.01"/>
+              </svg>
+            </div>
             <div>
-              <h3 class="card-title">Simulator Pengambilan Keputusan Aman</h3>
-              <p class="card-subtitle">Latih insting menghadapi simulasi chat realistis tanpa risiko kehilangan uang asli</p>
+              <h3 class="card-title">Simulator Pengambilan Keputusan</h3>
+              <p class="card-subtitle">Latih insting menghadapi simulasi pesan percakapan tanpa risiko kerugian finansial</p>
             </div>
           </div>
 
@@ -458,7 +465,7 @@
           </div>
 
           <!-- Insight Feedback Box Inside Chat -->
-          <div id="sim-insight-feedback" style="display: none; padding: 1rem 1.25rem; background: #0E1626; border-top: 1px solid var(--border-subtle);"></div>
+          <div id="sim-insight-feedback" style="display: none; padding: 1rem 1.25rem; border-top: 1px solid var(--border-subtle);"></div>
         </div>
       </div>
     </section>
@@ -471,15 +478,19 @@
       <div class="card" style="margin-bottom: 1.5rem;">
         <div class="card-header">
           <div class="card-title-group">
-            <div class="card-title-icon warning">🛡️</div>
+            <div class="card-title-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
+                <path d="M12 2L3 7v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-9-5z"/>
+              </svg>
+            </div>
             <div>
-              <h3 class="card-title">Guardian Alert Generator</h3>
-              <p class="card-subtitle">Buat kartu peringatan modus penipuan untuk dibagikan ke keluarga dan grup WhatsApp</p>
+              <h3 class="card-title">Pusat Pembuat Peringatan Siber</h3>
+              <p class="card-subtitle">Buat kartu peringatan modus kejahatan siber untuk dibagikan ke kerabat</p>
             </div>
           </div>
         </div>
         <p style="font-size: 0.925rem; color: var(--text-muted);">
-          Bantu melindungi orang terdekat Anda. Kartu dilengkapi sensor otomatis data pribadi (anonymization) agar sesuai etika dan regulasi privasi.
+          Bantu melindungi orang terdekat Anda. Kartu dilengkapi penyamaran otomatis nomor telepon dan data rekening demi menjaga privasi.
         </p>
       </div>
 
@@ -519,7 +530,7 @@
           </div>
 
           <button id="btn-copy-broadcast" class="btn btn-primary btn-block">
-            📋 Salin Teks Broadcast WhatsApp
+            Salin Teks Broadcast WhatsApp
           </button>
         </div>
 
@@ -528,16 +539,16 @@
           <h4 style="font-size: 1rem; font-weight: 700; margin-bottom: 1rem;">2. Pratinjau Kartu Siap Bagikan</h4>
           <div class="alert-preview-card">
             <div class="alert-card-header">
-              <span class="alert-banner-tag">🚨 PERINGATAN MODUS SIBER</span>
+              <span class="alert-banner-tag">PERINGATAN MODUS SIBER</span>
               <span style="font-size: 0.75rem; color: var(--text-dim);">MIT-WEEK 2026</span>
             </div>
             <h3 id="card-preview-title" class="alert-modus-title">Surat Undangan / Resi Paket Format .APK</h3>
-            <p id="card-preview-target" style="font-size: 0.85rem; color: #93C5FD; margin-bottom: 1.25rem;">Sasaran: Pengguna WhatsApp</p>
+            <p id="card-preview-target" style="font-size: 0.85rem; color: var(--dp-color-accent); margin-bottom: 1.25rem;">Sasaran: Pengguna WhatsApp</p>
 
-            <div class="alert-section-title">⚠️ Tanda Bahaya Kunci:</div>
+            <div class="alert-section-title">Tanda Bahaya Kunci:</div>
             <ul id="card-preview-flags" class="alert-bullet-list"></ul>
 
-            <div class="alert-section-title" style="color: var(--success); margin-top: 1rem;">🛡️ Cara Melindungi Diri:</div>
+            <div class="alert-section-title" style="color: var(--success); margin-top: 1rem;">Cara Melindungi Diri:</div>
             <ul id="card-preview-defense" class="alert-bullet-list alert-defense-list"></ul>
 
             <div class="alert-card-footer">
@@ -557,10 +568,14 @@
       <div class="card" style="margin-bottom: 1.5rem;">
         <div class="card-header">
           <div class="card-title-group">
-            <div class="card-title-icon">✅</div>
+            <div class="card-title-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </div>
             <div>
-              <h3 class="card-title">Security Checkup (Audit Kebiasaan Aman)</h3>
-              <p class="card-subtitle">Cek kesiapan pertahanan akun digital Anda tanpa memasukkan kata sandi atau data pribadi apapun</p>
+              <h3 class="card-title">Audit Kebiasaan Keamanan</h3>
+              <p class="card-subtitle">Cek kesiapan pertahanan akun digital Anda tanpa memasukkan kata sandi atau data pribadi apa pun</p>
             </div>
           </div>
         </div>
@@ -609,9 +624,13 @@
       <div class="card" style="margin-bottom: 2rem;">
         <div class="card-header">
           <div class="card-title-group">
-            <div class="card-title-icon">🇮🇩</div>
+            <div class="card-title-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
+                <path d="M3 21h18M5 21V7l7-4 7 4v14M9 10v4m6-4v4"/>
+              </svg>
+            </div>
             <div>
-              <h3 class="card-title">Direktori Kanal Pelaporan & Bantuan Resmi</h3>
+              <h3 class="card-title">Direktori Kanal Pelaporan &amp; Bantuan Resmi</h3>
               <p class="card-subtitle">Kanal resmi Republik Indonesia untuk pengaduan tindak pidana siber, rekening bank, dan konten ilegal</p>
             </div>
           </div>
@@ -623,7 +642,13 @@
       <div class="card disclosure-card">
         <div class="card-header">
           <div class="card-title-group">
-            <div class="card-title-icon purple">⚖️</div>
+            <div class="card-title-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="16" x2="12" y2="12"></line>
+                <line x1="12" y1="8" x2="12.01" y2="8"></line>
+              </svg>
+            </div>
             <div>
               <h3 class="card-title">Transparansi, Batasan &amp; Kebijakan Privasi</h3>
               <p class="card-subtitle">Komitmen etika dan kejujuran mengenai batasan sistem kami</p>
@@ -676,7 +701,7 @@
                 Data yang tersimpan di perangkat Anda hanyalah status checklist darurat dan progres simulasi Anda (localStorage). Anda dapat menghapusnya sewaktu-waktu:
               </p>
               <button id="btn-reset-local-data" class="btn btn-sm btn-outline btn-reset-danger">
-                🗑️ Hapus Seluruh Data Lokal &amp; Reset Progres
+                Hapus Seluruh Data Lokal &amp; Reset Progres
               </button>
             </div>
           </details>
@@ -763,7 +788,7 @@
         </button>
       </li>
       <li>
-        <button class="mobile-nav-btn" data-view="panic" style="color: #FFA5B2;">
+        <button class="mobile-nav-btn" data-view="panic">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <polygon points="7.86 2 16.14 2 22 7.86 22 16.14 16.14 22 7.86 22 2 16.14 2 7.86 7.86 2"></polygon>
             <line x1="12" y1="8" x2="12" y2="12"></line>
@@ -804,12 +829,12 @@
   <div id="toast-container" class="toast-container"></div>
 
   <!-- MODULE SCRIPTS -->
-  <script src="scanner.js"></script>
-  <script src="panic.js"></script>
-  <script src="simulator.js"></script>
-  <script src="alert-generator.js"></script>
-  <script src="checkup.js"></script>
-  <script src="resources.js"></script>
-  <script src="app.js"></script>
+  <script src="scanner.js?v=2.2.0"></script>
+  <script src="panic.js?v=2.2.0"></script>
+  <script src="simulator.js?v=2.2.0"></script>
+  <script src="alert-generator.js?v=2.2.0"></script>
+  <script src="checkup.js?v=2.2.0"></script>
+  <script src="resources.js?v=2.2.0"></script>
+  <script src="app.js?v=2.2.0"></script>
 </body>
 </html>
